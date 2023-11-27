@@ -8,8 +8,20 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%#= javascript_include_tag 'https://cdn.weglot.com/weglot.min.js' %>
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+    <script>
+      setTimeout(function(){
+        Weglot.initialize({
+          api_key: "wg_3bc7b4c6508a9f1fba78461727d496fb4"
+        });
+        Weglot.switchTo('de')
+        // console.log(Weglot.getCurrentLang());
+      }, 1000);
+    </script>
   </head>
 
+  <%# <body data-controller="weglot"> %>
   <body>
     <%= link_to 'Home', root_path %>
     <%= link_to 'pricing', static_pricing_path %>
