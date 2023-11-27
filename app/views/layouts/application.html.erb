@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'pricing', static_pricing_path %>
+    <%= link_to 'terms', static_terms_path %>
+    <%= link_to 'privacy', static_privacy_path %>
+    <%= link_to 'about', static_about_path %>
     <%= yield %>
   </body>
 </html>
